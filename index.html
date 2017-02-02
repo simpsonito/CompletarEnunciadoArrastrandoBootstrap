@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Actividad Arrastrar hacia la respuesta</title>
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <link href="css/styles.css" rel="stylesheet" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <section class="container">
+        <div id="main" class="row">
+
+            <div class="col-md-12">
+                <h1>Actividad Arrastrar hacia la respuesta</h1>
+            </div>
+            <div class="col-md-12">
+                <div id="dialog" title="Mensaje">
+                    <p>&nbsp;</p>
+                </div>
+                <div class="dialog-background" id="retroPopUp" style="display: none;">
+                    <div class="dialog-loading-wrapper">
+                        <div class="dialog-loading-icon">
+                            <div id="botonCerrarRetro"></div>
+                            <div id="retroPopUpMensaje">
+                                <!-- Aquí se colocarán los mensajes de retroalimentación. -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="instrucciones">
+                    Arrastra el la respuesta al espacio correcto
+                </p>
+                <div class="respuestas">
+                        Los recursos disponibles en la adquisición de un inmueble son aquellos con los que cuenta el <div class="ui-widget-header droppable" data-respuesta="cliente"></div> para solventar la operación de compra-venta (cobertura total del <div class="ui-widget-header droppable" data-respuesta="valor"></div> de <div class="ui-widget-header droppable" data-respuesta="vivienda"></div>, costo de <div class="ui-widget-header droppable" data-respuesta="avalúo"></div>, gastos del <div class="ui-widget-header droppable" data-respuesta="banco"></div>, gastos <div class="ui-widget-header droppable" data-respuesta="notariales"></div> y <div class="ui-widget-header droppable" data-respuesta="honorarios"></div> del notario).
+                </div>
+                <div class="preguntas">
+                    <div class="ui-widget-content draggable" data-respuesta="cliente">cliente</div>
+                    <div class="ui-widget-content draggable" data-respuesta="valor">valor</div>
+                    <div class="ui-widget-content draggable" data-respuesta="vivienda">vivienda (casa o departamento)</div>
+                    <div class="ui-widget-content draggable" data-respuesta="avalúo">avalúo</div>
+                    <div class="ui-widget-content draggable" data-respuesta="banco">banco</div>
+                    <div class="ui-widget-content draggable" data-respuesta="notariales">notariales</div>
+                    <div class="ui-widget-content draggable" data-respuesta="honorarios">honorarios</div>
+                </div>
+                <div class="barraInferior">
+                    <button id="btnRevisar">Revisar</button><button id="btnReiniciar">Reiniciar</button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</body>
+</html>
