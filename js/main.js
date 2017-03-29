@@ -106,8 +106,14 @@ $(function() {
                 //busca el lugar donde debió colocarse y en lugar dónde se colocó.
                 var strCorrecta = $(element).data("respuesta");
                 var strContestado = $(element).data(ATRIBUTO_COLOCADO).data("respuesta");
+                var boolCorrecta = false;
+                if(typeof strContestado === "object"){
+                    boolCorrecta = strContestado.indexOf(strCorrecta) > -1;
+                } else {
+                    boolCorrecta = strContestado === strCorrecta;
+                }
                 //Si es correcta, se contabiliza y asigna clase de correcta
-                if(strContestado === strCorrecta){
+                if(boolCorrecta){
                     $(element).addClass("bien");
                     $(element).removeClass("mal");
                     intContadorBuenas++;
